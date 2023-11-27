@@ -45,6 +45,40 @@
             width: 100vw;
             height: calc(100vh - 150px);
         }
+
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* This will ensure the image covers the entire slide */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .slide-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            /* Add more styling as required */
+        }
     </style>
 </head>
 
@@ -218,26 +252,28 @@
         </nav>
 
         <!-- Slider main container -->
-        <div class="swiper">
+        <div class="swiper relative">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <div class="w-full h-full flex items-center justify-center">
-                        <img src="/assets/galllery/01_08_2023/5.jpg" alt="" srcset="">
+                    <div class="slide-container">
+                        <img src="/assets/galllery/01_08_2023/5.jpg" alt="">
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="w-full h-full flex items-center justify-center">
-                        <img src="/assets/galllery/01_08_2023/3.jpg" alt="" srcset="">
+                    <div class="slide-container">
+                        <img src="/assets/galllery/01_08_2023/3.jpg" alt="">
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="w-full h-full flex items-center justify-center">
-                        <img src="/assets/galllery/06_10_2023/3.jpg" alt="" srcset="">
+                    <div class="slide-container">
+                        <img src="/assets/galllery/06_10_2023/3.jpg" alt="">
                     </div>
                 </div>
+                <!-- ... additional slides ... -->
             </div>
+
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
 
@@ -247,6 +283,13 @@
 
             <!-- If we need scrollbar -->
             <!-- <div class="swiper-scrollbar"></div> -->
+            <div class="sticky bottom-32 z-50 text-center flex items-center justify-center">
+                <div class="max-w-[880px]">
+                    <p class="text-5xl text-white font-black">OIC Ombudsman Association (OICOA)</p>
+                    <p class="text-2xl text-white font-medium mt-6">Rooted in Islamic Ethos - Pioneering Global
+                        Accountability and Embracing the Mohtasib Legacy for a Just and Harmonious Tomorrow</p>
+                </div>
+            </div>
 
         </div>
 
@@ -287,28 +330,6 @@
 
     <!-- #main -->
     <main id="main">
-
-
-
-        <!-- ======= Hero Section ======= -->
-        <section id="hero" class="d-flex align-items-center justify-content-center">
-            <div class="container aos-init aos-animate" data-aos="fade-up">
-
-                <div class="row justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
-                    <div class="col-xl-4 col-lg-8">
-                        <img src="/assets/img/logo.png" class="img-fluid w-75" alt="">
-                    </div>
-                    <div class="col-xl-8 col-lg-8">
-                        <h1>OIC Ombudsman Association (OICOA)</h1>
-                        <h2>
-                            Rooted in Islamic Ethos - Pioneering Global Accountability and Embracing the Mohtasib Legacy
-                            for a Just and Harmonious Tomorrow
-                        </h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Hero -->
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container aos-init aos-animate" data-aos="fade-up">
